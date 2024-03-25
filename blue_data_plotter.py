@@ -23,8 +23,8 @@ df['Minute'] = df['Minute'] - df['Minute'].min()
 df = df.sort_values(by='Minute')
 
 # # Set equation coefficients
-mf = 162.204
-mpb = 368.3042
+mf = 1.232
+mpb = 0.002
 v_0 = 10 * 1e-9     # Drop volume
 V = 50 * 1e-6      # Agar volume
 rad = 75 * 1e-3     # Petri dish radius
@@ -44,6 +44,6 @@ plt.ylabel('Average Radius (cm)')
 plt.grid(True)
 plt.ylim(bottom=0)
 
-plt.savefig('Blue Drop Theory vs Experimental.pdf')
+# plt.savefig('Blue Drop Theory vs Experimental.pdf')
 
 plt.show()
