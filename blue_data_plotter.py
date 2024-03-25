@@ -44,6 +44,6 @@ plt.ylabel('Average Radius (cm)')
 plt.grid(True)
 plt.ylim(bottom=0)
 
-# plt.savefig('Blue Drop Theory vs Experimental.pdf')
+plt.savefig('Blue Drop Theory vs Experimental.pdf')
 
 plt.show()
