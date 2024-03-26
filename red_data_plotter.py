@@ -30,7 +30,7 @@ rad = 75 * 1e-3     # Petri dish radius
 H = V/(np.pi*rad**2)    # Agar height
 M = m_oh * v_0 / H    # Initial total number of moles per thickness of agar
 
-D = 5.09e-10    # Diffusion Coefficient
+D = 5.59e-10    # Diffusion Coefficient
 t = df['Minute'][1:] # Time removing 0 
 r = np.sqrt(4 * D * 60 * t * (6 - np.log10(4 * np.pi * 60 * t * D / M))) * 100 + 0.43 # Converted to cm and seconds
 
@@ -39,9 +39,10 @@ plt.figure(figsize=(10, 5))
 plt.plot(df['Minute'], df['Average_Radius'], marker=',', linestyle='solid')
 plt.plot(t, r, marker=',', linestyle='--')
 
-plt.title('Red Drop Radius Over Time')
+# plt.title('Red Drop Radius Over Time')
 plt.xlabel('Minutes')
 plt.ylabel('Average Radius (cm)')
+plt.legend(['Experimental', 'Theoretical'])
 plt.grid(True)
 plt.ylim(bottom=0)
 

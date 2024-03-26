@@ -38,9 +38,10 @@ plt.figure(figsize=(10, 5))
 plt.plot(df['Minute'], df['Average_Radius'], marker=',', linestyle='solid')
 plt.axhline(y=r_inf, color='r', linestyle='--', label=f'r_inf = {r_inf:.2f} cm')
 
-plt.title('Blue Drop Radius Over Time')
+# plt.title('Blue Drop Radius Over Time')
 plt.xlabel('Minutes')
 plt.ylabel('Average Radius (cm)')
+plt.legend(['Experimental', 'Theoretical'])
 plt.grid(True)
 plt.ylim(bottom=0)
 
